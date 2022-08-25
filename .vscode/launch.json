@@ -1,0 +1,148 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "lessons_chat",
+            "cwd": "Users/yuralysyshak/lessons_chat",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "lessons_chat (profile mode)",
+            "cwd": "Users/yuralysyshak/lessons_chat",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lessons_chat (release mode)",
+            "cwd": "Users/yuralysyshak/lessons_chat",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "musicapp",
+            "cwd": "Users/yuralysyshak/musicapp",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "musicapp (profile mode)",
+            "cwd": "Users/yuralysyshak/musicapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "musicapp (release mode)",
+            "cwd": "Users/yuralysyshak/musicapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "sound",
+            "cwd": "Users/yuralysyshak/sound",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "sound (profile mode)",
+            "cwd": "Users/yuralysyshak/sound",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "sound (release mode)",
+            "cwd": "Users/yuralysyshak/sound",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "test",
+            "cwd": "Users/yuralysyshak/test",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "test (profile mode)",
+            "cwd": "Users/yuralysyshak/test",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "test (release mode)",
+            "cwd": "Users/yuralysyshak/test",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "xylophone",
+            "cwd": "Users/yuralysyshak/xylophone",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "xylophone (profile mode)",
+            "cwd": "Users/yuralysyshak/xylophone",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "xylophone (release mode)",
+            "cwd": "Users/yuralysyshak/xylophone",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "App",
+            "cwd": "Users/yuralysyshak/Documents/App",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "App (profile mode)",
+            "cwd": "Users/yuralysyshak/Documents/App",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "App (release mode)",
+            "cwd": "Users/yuralysyshak/Documents/App",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "LessonsChat-master",
+            "cwd": "Users/yuralysyshak/Downloads/LessonsChat-master",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "LessonsChat-master (profile mode)",
+            "cwd": "Users/yuralysyshak/Downloads/LessonsChat-master",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "LessonsChat-master (release mode)",
+            "cwd": "Users/yuralysyshak/Downloads/LessonsChat-master",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
