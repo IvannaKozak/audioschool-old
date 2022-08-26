@@ -1,3 +1,4 @@
+import 'package:audioschool/screens/books_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -26,7 +27,13 @@ class MainScreen extends StatelessWidget {
                       side: BorderSide(width: 5.0, color: Colors.white)),
                   fixedSize: Size.fromWidth(320),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const BooksScreen()),
+                  );
+                },
                 child: Text(
                   'Історія України',
                   style: TextStyle(color: Colors.white, fontSize: 30.0),
