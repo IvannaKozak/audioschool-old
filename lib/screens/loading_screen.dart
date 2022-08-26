@@ -8,7 +8,6 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen> {
-
   var assetsImage = const AssetImage('images/books.png');
 
   @override
@@ -18,8 +17,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   _navigatetomain() async {
-    await Future.delayed(Duration(milliseconds: 5000), (){});
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
+    await Future.delayed(Duration(milliseconds: 1000), () {});
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => MainScreen()));
   }
 
   @override
@@ -27,7 +27,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFF213d6e),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment. center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           const Text(
             'AudioSchool',
