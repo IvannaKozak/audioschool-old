@@ -22,20 +22,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// SplashScreen(
-//           seconds: 5,
-//           navigateAfterSeconds: MainScreen(),
-//           title: const Text(
-//             'AudioSchool',
-//             style: TextStyle(
-//                 color: Colors.white,
-//                 fontWeight: FontWeight.w900,
-//                 fontSize: 30.0),
-//           ),
-//           image: SvgPicture.asset(_assetNames),
-//           backgroundColor: const Color(0xFF213d6e),
-//           //useLoader: SpinKitCircle(),
-//           loaderColor: Colors.white,
-//         )
-
