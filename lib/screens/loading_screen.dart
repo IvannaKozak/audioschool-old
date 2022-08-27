@@ -22,6 +22,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
         context, MaterialPageRoute(builder: (context) => MainScreen()));
   }
 
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
