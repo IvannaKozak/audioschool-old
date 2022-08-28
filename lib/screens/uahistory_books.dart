@@ -177,6 +177,7 @@ class BookCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
         style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
           fixedSize: Size.fromHeight(170),
           backgroundColor: Color(0xFF14284B),
           shape: RoundedRectangleBorder(
@@ -184,25 +185,43 @@ class BookCard extends StatelessWidget {
               side: BorderSide(width: 1.0, color: Colors.white)),
         ),
         onPressed: () {},
-        child: Row(
-          children: <Widget>[
-            bookImage,
-            SizedBox(
-              width: 10.0,
-            ),
-            Column(
-              children: <Widget>[
-                Text(bookTitle,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white)),
-                Text(
-                  bookAuthor, style: TextStyle(color: Colors.white),
-                )
-              ],
-            )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(0.0),
+          child: Row(
+            children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), bottomLeft: Radius.circular(20.0)),
+                child: bookImage),
+              SizedBox(
+                width: 15.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(bookTitle,
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white)),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Text(
+                      bookAuthor,
+                      style: TextStyle(color: Colors.white, fontSize: 12.0),
+                    ),
+                    SizedBox(height: 60,),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 155.0),
+                      child: Image(image: AssetImage('images/arrow.png')),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ));
   }
 }
