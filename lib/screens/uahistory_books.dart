@@ -15,7 +15,7 @@ List<bool> _selections = [true, false, false, false];
 
 class _BooksScreenState extends State<BooksScreen> {
   // SchoolClass selectclass;
- List<bool> _hasBeenPressed = [true, false, false, false];
+  List<bool> _hasBeenPressed = [true, false, false, false];
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +128,7 @@ class _BooksScreenState extends State<BooksScreen> {
                     ),
                     onPressed: () => {
                       setState(() {
-                           _hasBeenPressed[3] = !_hasBeenPressed[3];
+                        _hasBeenPressed[3] = !_hasBeenPressed[3];
                       })
                     },
                     child: Text(
@@ -144,16 +144,70 @@ class _BooksScreenState extends State<BooksScreen> {
             ),
           ),
           SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              
-            )
-            ),
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: BookCard(
+                      bookImage:
+                          Image(image: AssetImage('images/history_1.jpg')),
+                      bookTitle: 'Історія України 9 клас',
+                      bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
+                    ),
+                  )
+                ],
+              )),
         ],
       ),
     );
   }
 }
+
+class BookCard extends StatelessWidget {
+  BookCard(
+      {required this.bookImage,
+      required this.bookTitle,
+      required this.bookAuthor});
+  final Image bookImage;
+  final String bookTitle;
+  final String bookAuthor;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+        style: TextButton.styleFrom(
+          fixedSize: Size.fromHeight(170),
+          backgroundColor: Color(0xFF14284B),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+              side: BorderSide(width: 1.0, color: Colors.white)),
+        ),
+        onPressed: () {},
+        child: Row(
+          children: <Widget>[
+            bookImage,
+            SizedBox(
+              width: 10.0,
+            ),
+            Column(
+              children: <Widget>[
+                Text(bookTitle,
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white)),
+                Text(
+                  bookAuthor, style: TextStyle(color: Colors.white),
+                )
+              ],
+            )
+          ],
+        ));
+  }
+}
+
+
 
 
 // class BookCard extends StatelessWidget {
