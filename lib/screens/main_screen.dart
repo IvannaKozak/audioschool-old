@@ -17,11 +17,11 @@ class MainScreen extends StatelessWidget {
           padding: const EdgeInsets.all(25.0),
           child: Column(
             children: <Widget>[
+              Text('Вибери предмет і слухай аудіокнигу'),
               TextButton(
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
                   backgroundColor: Color(0xFF2457AF),
-                  //side: BorderSide(color: Colors.white, width: 5),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       side: BorderSide(width: 5.0, color: Colors.white)),

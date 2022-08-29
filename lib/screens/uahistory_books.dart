@@ -43,7 +43,6 @@ class _BooksScreenState extends State<BooksScreen> {
                         padding: EdgeInsets.symmetric(vertical: 12.0),
                         backgroundColor:
                             _hasBeenPressed[0] ? kInactiveColor : kActiveColor,
-                        //side: BorderSide(color: Colors.white, width: 5),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                             side: BorderSide(width: 1.0, color: Colors.white)),
@@ -146,50 +145,60 @@ class _BooksScreenState extends State<BooksScreen> {
               ),
             ),
             SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: BookCard(
-                        bookImage:
-                            Image(image: AssetImage('images/history_1.jpg')),
-                        bookTitle: 'Історія України 9 клас',
-                        bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
-                      ),
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: BookCard(
+                      bookImage:
+                          Image(image: AssetImage('images/history_1.jpg')),
+                      bookTitle: 'Історія України 9 клас',
+                      bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
                     ),
-                    SizedBox(height: 20.0,),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: BookCard(
-                        bookImage:
-                            Image(image: AssetImage('images/history_1.jpg')),
-                        bookTitle: 'Біологія 10 клас',
-                        bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
-                      ),
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: BookCard(
+                      bookImage:
+                          Image(image: AssetImage('images/history_1.jpg')),
+                      bookTitle: 'Біологія 10 клас',
+                      bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
                     ),
-                    SizedBox(height: 20.0,),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: BookCard(
-                        bookImage:
-                            Image(image: AssetImage('images/history_1.jpg')),
-                        bookTitle: 'Історія України 9 клас',
-                        bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
-                      ),
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: BookCard(
+                      bookImage:
+                          Image(image: AssetImage('images/history_1.jpg')),
+                      bookTitle: 'Історія України 9 клас',
+                      bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
                     ),
-                    SizedBox(height: 20.0,),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: BookCard(
-                        bookImage:
-                            Image(image: AssetImage('images/history_1.jpg')),
-                        bookTitle: 'Алгебра 11 клас',
-                        bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
-                      ),
-                    )
-                  ],
-                ),),
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: BookCard(
+                      bookImage:
+                          Image(image: AssetImage('images/history_1.jpg')),
+                      bookTitle: 'Алгебра 11 клас',
+                      bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
@@ -223,32 +232,49 @@ class BookCard extends StatelessWidget {
           child: Row(
             children: <Widget>[
               ClipRRect(
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), bottomLeft: Radius.circular(20.0)),
-                child: bookImage),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20.0),
+                      bottomLeft: Radius.circular(20.0)),
+                  child: bookImage),
               SizedBox(
                 width: 15.0,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  //crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    Text(bookTitle,
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white)),
-                    SizedBox(
-                      height: 10.0,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(bookTitle,
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          bookAuthor,
+                          style: TextStyle(color: Colors.white, fontSize: 12.0),
+                        ),
+                      ],
                     ),
-                    Text(
-                      bookAuthor,
-                      style: TextStyle(color: Colors.white, fontSize: 12.0),
-                    ),
-                    SizedBox(height: 60,),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 155.0),
-                      child: Image(image: AssetImage('images/arrow.png')),
+                    Row(
+                      children: <Widget>[
+                        Text(
+                          'Слухати',
+                          style: TextStyle(color: Color(0xFFFDDC50)),
+                        ),
+                        SizedBox(
+                          width: 3.0,
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Color(0xFFFDDC50),
+                        ),
+                      ],
                     )
                   ],
                 ),
@@ -258,109 +284,3 @@ class BookCard extends StatelessWidget {
         ));
   }
 }
-
-
-
-
-// class BookCard extends StatelessWidget {
-//   BookCard(
-//       {required onClicked, required this.text, required this.bookImage});
-//   final Function onClicked;
-//   final String text;
-//   final AssetImage bookImage;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return RawMaterialButton(
-//       elevation: 0.0,
-//       child: Image(image: bookImage),
-//       onPressed: onClicked,
-//       //shape: CircleBorder(),
-//       fillColor: Color(0xFF213d6e),
-//     );
-//   }
-// }
-
-// CircleAvatar(
-//         radius: 90.0,
-//         backgroundImage: bookImage,
-//       )
-
-//Buttons
-
-
-// Expanded(
-//             child: Row(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               crossAxisAlignment: CrossAxisAlignment.baseline,
-//               textBaseline: TextBaseline.alphabetic,
-//               children: <Widget>[
-//                 Expanded(
-//                   child: Column(
-//                       crossAxisAlignment: CrossAxisAlignment.stretch,
-//                       children: <Widget>[
-//                         Expanded(
-//                             child: RainbowButton(
-//                           bookImage: AssetImage('images/history_1.jpg'),
-//                           text: 'Bird',
-//                           colour: Colors.red,
-//                           onClicked: () {
-//                             setState(() {});
-//                           },
-//                         )),
-//                         Expanded(
-//                             child: RainbowButton(
-//                           bookImage: AssetImage('images/history_1.jpg'),
-//                           text: 'Cat',
-//                           colour: Colors.orange,
-//                           onClicked: () {
-//                             setState(() {});
-//                           },
-//                         )),
-//                         Expanded(
-//                             child: RainbowButton(
-//                           bookImage: AssetImage('images/history_1.jpg'),
-//                           text: 'Dog',
-//                           colour: Colors.yellow,
-//                           onClicked: () {
-//                             setState(() {});
-//                           },
-//                         )),
-//                       ]),
-//                 ),
-//                 Expanded(
-//                   child: Column(
-//                       crossAxisAlignment: CrossAxisAlignment.stretch,
-//                       children: <Widget>[
-//                         Expanded(
-//                             child: RainbowButton(
-//                           bookImage: AssetImage('images/history_1.jpg'),
-//                           text: 'Horse',
-//                           colour: Colors.green,
-//                           onClicked: () {
-//                             setState(() {});
-//                           },
-//                         )),
-//                         Expanded(
-//                             child: RainbowButton(
-//                           bookImage: AssetImage('images/history_1.jpg'),
-//                           text: 'Lion',
-//                           colour: Colors.blue,
-//                           onClicked: () {
-//                             setState(() {});
-//                           },
-//                         )),
-//                         Expanded(
-//                             child: RainbowButton(
-//                           bookImage: AssetImage('images/history_1.jpg'),
-//                           text: 'Wild beast',
-//                           colour: Colors.purple,
-//                           onClicked: () {
-//                             setState(() {});
-//                           },
-//                         )),
-//                       ]),
-//                 ),
-//               ],
-//             ),
-//           ),
