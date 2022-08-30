@@ -1,5 +1,7 @@
 import 'package:audioschool/screens/uahistory_books.dart';
 import 'package:flutter/material.dart';
+import 'package:audioschool/screens/geography_screen.dart';
+import 'package:audioschool/screens/worldhistory_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -31,7 +33,7 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const BooksScreen()),
+                        builder: (context) => const UahistoryScreen()),
                   );
                 },
                 child: Text(
@@ -52,7 +54,13 @@ class MainScreen extends StatelessWidget {
                       side: BorderSide(width: 5.0, color: Colors.white)),
                   fixedSize: Size.fromWidth(320),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const WorldHistoryScreen()),
+                  );
+                },
                 child: Text(
                   'Всесвітня Історія',
                   style: TextStyle(color: Colors.white, fontSize: 30.0),
@@ -90,7 +98,13 @@ class MainScreen extends StatelessWidget {
                   ),
                   fixedSize: Size.fromWidth(320),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const GeographyScreen()),
+                  );
+                },
                 child: Text(
                   'Географія',
                   style: TextStyle(color: Colors.white, fontSize: 30.0),
@@ -98,23 +112,6 @@ class MainScreen extends StatelessWidget {
               ),
               SizedBox(
                 height: 25,
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  backgroundColor: Color(0xFFC7AD3C),
-                  //side: BorderSide(color: Colors.white, width: 5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    side: BorderSide(width: 5.0, color: Colors.white),
-                  ),
-                  fixedSize: Size.fromWidth(320),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'Українська мова',
-                  style: TextStyle(color: Colors.white, fontSize: 30.0),
-                ),
               ),
               SizedBox(
                 height: 40.0,
