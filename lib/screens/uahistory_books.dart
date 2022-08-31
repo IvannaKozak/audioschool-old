@@ -356,7 +356,8 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => ChapterScreen(
-                                    TopText: 'Історія України 11 клас',
+                                    TopText: "Історія України 6 клас",
+                                    TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
                                     TopImage: Image(
                                       image:
                                           AssetImage('images/history_2.jpeg'),
@@ -384,6 +385,7 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                             MaterialPageRoute(
                               builder: (context) => ChapterScreen(
                                   TopText: 'Біологія 10 клас',
+                                  TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
                                   TopImage: Image(
                                     image: AssetImage(
                                       'images/history_1.jpg',
@@ -411,6 +413,7 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                           MaterialPageRoute(
                               builder: (context) => ChapterScreen(
                                     TopText: 'Історія України 9 клас',
+                                    TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
                                     TopImage: Image(
                                       image: AssetImage('images/history_1.jpg'),
                                       height: 100.0,
@@ -436,6 +439,7 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                           MaterialPageRoute(
                               builder: (context) => ChapterScreen(
                                     TopText: 'Алгебра',
+                                    TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
                                     TopImage: Image(
                                       image: AssetImage('images/history_1.jpg'),
                                       height: 100.0,
@@ -525,9 +529,9 @@ class BookCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: const <Widget>[
                           //Change to aling
-                          // SizedBox(
-                          //   width: 80,
-                          // ),
+                          SizedBox(
+                            width: 80,
+                          ),
                           Text(
                             'Слухати',
                             style: TextStyle(

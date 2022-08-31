@@ -1,7 +1,6 @@
 import 'package:audioschool/screens/uahistory_books.dart';
 import 'package:flutter/material.dart';
-import 'package:audioschool/screens/geography_screen.dart';
-import 'package:audioschool/screens/worldhistory_screen.dart';
+import 'package:audioschool/screens/empty_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -57,8 +56,7 @@ class MainScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const WorldHistoryScreen()),
+                    MaterialPageRoute(builder: (context) => EmptyScreen()),
                   );
                 },
                 child: Text(
@@ -78,7 +76,12 @@ class MainScreen extends StatelessWidget {
                       side: BorderSide(width: 5.0, color: Colors.white)),
                   fixedSize: Size.fromWidth(320),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EmptyScreen()),
+                  );
+                },
                 child: Text(
                   'Біологія',
                   style: TextStyle(color: Colors.white, fontSize: 30.0),
@@ -101,17 +104,13 @@ class MainScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const GeographyScreen()),
+                    MaterialPageRoute(builder: (context) => EmptyScreen()),
                   );
                 },
                 child: Text(
                   'Географія',
                   style: TextStyle(color: Colors.white, fontSize: 30.0),
                 ),
-              ),
-              SizedBox(
-                height: 25,
               ),
               SizedBox(
                 height: 40.0,
