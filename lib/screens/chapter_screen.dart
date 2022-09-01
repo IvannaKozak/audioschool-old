@@ -1,4 +1,5 @@
 import 'package:audioschool/screens/main_screen.dart';
+import 'package:audioschool/screens/para_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:audioschool/constants.dart';
 import 'package:audioschool/books_card.dart';
@@ -19,49 +20,43 @@ class ChapterScreen extends StatelessWidget {
         backgroundColor: Color(0xFF14284B),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(top: 25.0),
         child: Column(
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(15), child: TopImage),
-                SizedBox(
-                  width: 20.0,
-                ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            TopText,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18.0),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            TopAuthor,
-                            style: TextStyle(
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: TopImage),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          TopText,
+                          style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16.0,
-                            ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18.0),
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        Text(
+                          TopAuthor,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16.0,
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -70,10 +65,20 @@ class ChapterScreen extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ParaScreen(
+                                  Title: 'Розділ 1',
+                                  Top2Text: TopText,
+                                  Top2Author: TopAuthor,
+                                )),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Color(0xff081E41),
-                      fixedSize: Size(320, 60),
+                      fixedSize: Size(260, 60),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -109,10 +114,20 @@ class ChapterScreen extends StatelessWidget {
                     height: 25,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ParaScreen(
+                                  Title: 'Розділ 2',
+                                  Top2Text: TopText,
+                                  Top2Author: TopAuthor,
+                                )),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Color(0xff081E41),
-                      fixedSize: Size(320, 60),
+                      fixedSize: Size(260, 60),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -148,10 +163,20 @@ class ChapterScreen extends StatelessWidget {
                     height: 25,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ParaScreen(
+                                  Title: 'Розділ 3',
+                                  Top2Text: TopText,
+                                  Top2Author: TopAuthor,
+                                )),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Color(0xff081E41),
-                      fixedSize: Size(320, 60),
+                      fixedSize: Size(260, 60),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -187,10 +212,20 @@ class ChapterScreen extends StatelessWidget {
                     height: 25,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ParaScreen(
+                                  Title: 'Розділ 4',
+                                  Top2Text: TopText,
+                                  Top2Author: TopAuthor,
+                                )),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Color(0xff081E41),
-                      fixedSize: Size(320, 60),
+                      fixedSize: Size(260, 60),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -226,10 +261,20 @@ class ChapterScreen extends StatelessWidget {
                     height: 25,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ParaScreen(
+                                  Title: 'Розділ 5',
+                                  Top2Text: TopText,
+                                  Top2Author: TopAuthor,
+                                )),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Color(0xff081E41),
-                      fixedSize: Size(320, 60),
+                      fixedSize: Size(260, 60),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -265,10 +310,20 @@ class ChapterScreen extends StatelessWidget {
                     height: 25,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ParaScreen(
+                                  Title: 'Розділ 6',
+                                  Top2Text: TopText,
+                                  Top2Author: TopAuthor,
+                                )),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Color(0xff081E41),
-                      fixedSize: Size(320, 60),
+                      fixedSize: Size(260, 60),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),

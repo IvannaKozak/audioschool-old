@@ -18,6 +18,17 @@ class MainScreen extends StatelessWidget {
           padding: const EdgeInsets.all(25.0),
           child: Column(
             children: <Widget>[
+              Text(
+                'Що хочеш послухати?',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
               TextButton(
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
@@ -119,7 +130,7 @@ class MainScreen extends StatelessWidget {
                 'Потім буде більше...',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 20.0,
+                    fontSize: 16.0,
                     fontWeight: FontWeight.bold),
               ),
             ],

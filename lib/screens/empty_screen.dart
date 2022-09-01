@@ -12,22 +12,29 @@ class EmptyScreen extends StatelessWidget {
         backgroundColor: Color(0xFF14284B),
       ),
       backgroundColor: const Color(0xFF213d6e),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Text(
-            'AudioSchool',
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold),
-          ),
-          Image(image: assetsImage),
-          Text(
-            'Книжки озвучуються, незабаром будуть доступні :)',
-            style: TextStyle(color: Colors.white, fontSize: 16.0),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 100.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'AudioSchool',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            Image(image: assetsImage),
+            Text(
+              textAlign: TextAlign.center,
+              'Книжки озвучуються, незабаром будуть доступні :)',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }
