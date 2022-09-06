@@ -2,16 +2,19 @@ import 'package:audioschool/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:audioschool/constants.dart';
 import 'package:audioschool/books_card.dart';
+import 'package:audioschool/screens/play_screen.dart';
 
 class ParaScreen extends StatelessWidget {
   ParaScreen({
     required this.Title,
-    required this.Top2Text,
-    required this.Top2Author,
+    required this.TopText,
+    required this.TopAuthor,
+    required this.TopImage,
   });
   final String Title;
-  final String Top2Text;
-  final String Top2Author;
+  final String TopText;
+  final String TopAuthor;
+  final Image TopImage;
 
   @override
   Widget build(BuildContext context) {
@@ -33,31 +36,31 @@ class ParaScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
+                      ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: TopImage),
                       SizedBox(
                         width: 20.0,
                       ),
                       Column(
                         children: [
                           Text(
-                            Top2Text,
+                            TopText,
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18.0),
                           ),
                           SizedBox(
-                            height: 12.0,
+                            height: 12,
                           ),
                           Text(
-                            Top2Author,
+                            TopAuthor,
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16.0,
                             ),
                           ),
-                          SizedBox(
-                            height: 15.0,
-                          )
                         ],
                       ),
                     ],
@@ -69,7 +72,22 @@ class ParaScreen extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PlayScreen(
+                                  Title: 'Історія України',
+                                  TopText: 'Біологія 10 клас',
+                                  TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
+                                  TopImage: Image(
+                                    image: AssetImage(
+                                      'images/history_1.jpg',
+                                    ),
+                                    height: 100.0,
+                                  )),
+                            ));
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: Color(0xff081E41),
                         fixedSize: Size(320, 50),

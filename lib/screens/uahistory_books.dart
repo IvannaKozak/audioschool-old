@@ -2,7 +2,7 @@ import 'package:audioschool/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:audioschool/constants.dart';
 import 'package:audioschool/books_card.dart';
-import 'package:audioschool/screens/chapter_screen.dart';
+import 'package:audioschool/screens/para_screen.dart';
 // import 'package:audioschool/screens/chapter_screen.dart';
 
 class UahistoryScreen extends StatefulWidget {
@@ -355,7 +355,8 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ChapterScreen(
+                              builder: (context) => ParaScreen(
+                                    Title: 'Історія України',
                                     TopText: "Історія України 6 клас",
                                     TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
                                     TopImage: Image(
@@ -383,7 +384,8 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ChapterScreen(
+                              builder: (context) => ParaScreen(
+                                  Title: 'Історія України',
                                   TopText: 'Біологія 10 клас',
                                   TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
                                   TopImage: Image(
@@ -411,7 +413,8 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ChapterScreen(
+                              builder: (context) => ParaScreen(
+                                    Title: 'Історія України',
                                     TopText: 'Історія України 9 клас',
                                     TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
                                     TopImage: Image(
@@ -437,8 +440,9 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ChapterScreen(
-                                    TopText: 'Алгебра',
+                              builder: (context) => ParaScreen(
+                                    Title: 'Історія України',
+                                    TopText: 'Історія України',
                                     TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
                                     TopImage: Image(
                                       image: AssetImage('images/history_1.jpg'),
