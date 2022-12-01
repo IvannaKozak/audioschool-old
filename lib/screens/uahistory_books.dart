@@ -356,10 +356,10 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => ParaScreen(
-                                    Title: 'Історія України',
-                                    TopText: "Історія України 6 клас",
-                                    TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
-                                    TopImage: Image(
+                                    title: 'Історія України',
+                                    book: "Історія України 11 клас",
+                                    author: 'О.В.Гісем, О.О.Мартинюк',
+                                    image: Image(
                                       image:
                                           AssetImage('images/history_2.jpeg'),
                                       height: 100.0,
@@ -385,10 +385,10 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => ParaScreen(
-                                  Title: 'Історія України',
-                                  TopText: 'Біологія 10 клас',
-                                  TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
-                                  TopImage: Image(
+                                  title: 'Історія України',
+                                  book: 'Історія України 10 клас',
+                                  author: 'О.В.Гісем, О.О.Мартинюк',
+                                  image: Image(
                                     image: AssetImage(
                                       'images/history_1.jpg',
                                     ),
@@ -399,7 +399,7 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                       bookImage: Image(
                         image: AssetImage('images/history_1.jpg'),
                       ),
-                      bookTitle: 'Біологія 10 клас',
+                      bookTitle: 'Історія України 10 клас',
                       bookAuthor: 'О.В. Гісем, О.О. Мартинюк',
                     ),
                   ),
@@ -414,10 +414,10 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => ParaScreen(
-                                    Title: 'Історія України',
-                                    TopText: 'Історія України 9 клас',
-                                    TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
-                                    TopImage: Image(
+                                    title: 'Історія України',
+                                    book: 'Історія України 9 клас',
+                                    author: 'О.В.Гісем, О.О.Мартинюк',
+                                    image: Image(
                                       image: AssetImage('images/history_1.jpg'),
                                       height: 100.0,
                                     ),
@@ -441,10 +441,10 @@ class _UahistoryScreenState extends State<UahistoryScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => ParaScreen(
-                                    Title: 'Історія України',
-                                    TopText: 'Історія України',
-                                    TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
-                                    TopImage: Image(
+                                    title: 'Історія України',
+                                    book: 'Історія України',
+                                    author: 'О.В.Гісем, О.О.Мартинюк',
+                                    image: Image(
                                       image: AssetImage('images/history_1.jpg'),
                                       height: 100.0,
                                     ),
@@ -500,10 +500,11 @@ class BookCard extends StatelessWidget {
         child: Row(
           children: <Widget>[
             ClipRRect(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20.0),
-                    bottomLeft: Radius.circular(20.0)),
-                child: bookImage),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  bottomLeft: Radius.circular(20.0)),
+              child: bookImage,
+            ),
             SizedBox(
               width: 15.0,
             ),

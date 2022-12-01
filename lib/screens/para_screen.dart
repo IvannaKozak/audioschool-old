@@ -6,22 +6,22 @@ import 'package:audioschool/screens/play_screen.dart';
 
 class ParaScreen extends StatelessWidget {
   ParaScreen({
-    required this.Title,
-    required this.TopText,
-    required this.TopAuthor,
-    required this.TopImage,
+    required this.title,
+    required this.book,
+    required this.author,
+    required this.image,
   });
-  final String Title;
-  final String TopText;
-  final String TopAuthor;
-  final Image TopImage;
+  final String title;
+  final String book;
+  final String author;
+  final Image image;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF213d6e),
       appBar: AppBar(
-        title: Text(Title),
+        title: Text(title),
         backgroundColor: Color(0xFF14284B),
       ),
       body: Padding(
@@ -38,14 +38,14 @@ class ParaScreen extends StatelessWidget {
                     children: <Widget>[
                       ClipRRect(
                           borderRadius: BorderRadius.circular(15),
-                          child: TopImage),
+                          child: image),
                       SizedBox(
                         width: 20.0,
                       ),
                       Column(
                         children: [
                           Text(
-                            TopText,
+                            book,
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class ParaScreen extends StatelessWidget {
                             height: 12,
                           ),
                           Text(
-                            TopAuthor,
+                            author,
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16.0,
@@ -77,12 +77,12 @@ class ParaScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => PlayScreen(
-                                  Title: 'Історія України',
-                                  TopText: 'Біологія 10 клас',
-                                  TopAuthor: 'О.В.Гісем, О.О.Мартинюк',
-                                  TopImage: Image(
+                                  title: 'Історія України',
+                                  book: 'Історія України 11 клас',
+                                  author: 'О.В.Гісем, О.О.Мартинюк',
+                                  image: Image(
                                     image: AssetImage(
-                                      'images/history_1.jpg',
+                                      'images/history_2.jpeg',
                                     ),
                                     height: 100.0,
                                   )),
