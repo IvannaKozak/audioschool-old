@@ -177,7 +177,7 @@ class ControlButtons extends StatelessWidget {
           onPressed: () {
             showSliderDialog(
               context: context,
-              title: "Adjust volume",
+              title: "Гучнісь аудіо",
               divisions: 10,
               min: 0.0,
               max: 1.0,
@@ -187,10 +187,14 @@ class ControlButtons extends StatelessWidget {
             );
           },
         ),
-        IconButton(
-          icon: const Icon(Icons.skip_previous_rounded, color: Colors.white),
-          iconSize: 64.0,
-          onPressed: player.play,
+
+        StreamBuilder<SequenceState?>(
+          stream: player.sequenceStateStream,
+          builder: (context, snapshot) => IconButton(
+            icon: const Icon(Icons.skip_previous_rounded, color: Colors.white),
+            onPressed: player.hasPrevious ? player.seekToPrevious : null,
+            iconSize: 48.0,
+          ),
         ),
 
         /// This StreamBuilder rebuilds whenever the player state changes, which
@@ -247,12 +251,18 @@ class ControlButtons extends StatelessWidget {
             }
           },
         ),
-
-        IconButton(
-          icon: const Icon(Icons.skip_next_rounded, color: Colors.white),
-          iconSize: 64.0,
-          onPressed: player.play,
+        StreamBuilder<SequenceState?>(
+          stream: player.sequenceStateStream,
+          builder: (context, snapshot) => IconButton(
+            icon: const Icon(
+              Icons.skip_next_rounded,
+              color: Colors.white,
+            ),
+            iconSize: 48.0,
+            onPressed: player.hasNext ? player.seekToNext : null,
+          ),
         ),
+
         // Opens speed slider dialog
         StreamBuilder<double>(
           stream: player.speedStream,
