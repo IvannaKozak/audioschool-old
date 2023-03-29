@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "725297145682",
+    "project_id": "audioschool-765fa",
+    "storage_bucket": "audioschool-765fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725297145682:android:0ec93a078352ca8fe1fc8b",
+        "android_client_info": {
+          "package_name": "com.example.audioschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725297145682-vtajng7ms98jompf5382lncce3qtvfpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4sOZ_Sg09EJNB7yWZuwTNCpcVobteWAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725297145682-vtajng7ms98jompf5382lncce3qtvfpd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "725297145682-nnc7006l51dq38lah03s3v1nm6ob8f6n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.audioschool"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

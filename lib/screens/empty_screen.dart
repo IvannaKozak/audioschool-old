@@ -2,6 +2,8 @@ import 'package:audioschool/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
+import '../widgets/book_widget.dart';
+
 class EmptyScreen extends StatelessWidget {
   var assetsImage = const AssetImage('images/books.png');
   @override
@@ -24,15 +26,18 @@ class EmptyScreen extends StatelessWidget {
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold),
             ),
-            Image(image: assetsImage),
-            Text(
-              textAlign: TextAlign.center,
-              'Книжки озвучуються, незабаром будуть доступні :)',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold),
+            BookWidget(
+              id: 'xFcGre1TS9bhgFOwr3kf',
             ),
+            // Image(image: assetsImage),
+            // Text(
+            //   textAlign: TextAlign.center,
+            //   'Книжки озвучуються, незабаром будуть доступні :)',
+            //   style: TextStyle(
+            //       color: Colors.white,
+            //       fontSize: 16.0,
+            //       fontWeight: FontWeight.bold),
+            // ),
           ],
         ),
       ),
